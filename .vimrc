@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin '42paris/42header'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'morhetz/gruvbox'
 Plugin 'zekzekus/menguless'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
@@ -31,6 +32,7 @@ set mouse=a
 set colorcolumn=80
 set signcolumn=yes           " show GitGutter signs
 set laststatus=2             " always show statusline
+set hlsearch
 set clipboard=unnamedplus
 
 " --- GitGutter configuration ---
@@ -59,7 +61,7 @@ set statusline+=\ [%p%%]
 set statusline+=\ [%l:%c]
 
 " --- Appearance ---
-colorscheme menguless
+colorscheme gruvbox
 set background=dark
 
 " Force colorcolumn highlight to red (ignore colorscheme)
@@ -70,6 +72,7 @@ augroup PersistentColorColumn
 augroup END
 
 " --- 42 school header settings ---
+let $MAIL = "ryatan@student.42singapore.sg"
 let g:user42 = 'ryatan'
 let g:mail42 = 'ryatan@student.42singapore.sg'
 
@@ -82,3 +85,6 @@ let g:netrw_liststyle = 1
 " --- for fzf --
 nnoremap <C-f> :Files<Cr>
 nnoremap <C-s> :Rg<Cr>
+
+" --- for removing hl when search --
+nnoremap <esc><esc> :noh<cr> 
