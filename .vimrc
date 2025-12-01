@@ -11,8 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin '42paris/42header'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'morhetz/gruvbox'
 Plugin 'zekzekus/menguless'
+Plugin 'axgfn/parchment'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
@@ -61,8 +61,8 @@ set statusline+=\ [%p%%]
 set statusline+=\ [%l:%c]
 
 " --- Appearance ---
-colorscheme gruvbox
-set background=dark
+colorscheme parchment
+set background=light
 
 " Force colorcolumn highlight to red (ignore colorscheme)
 highlight ColorColumn ctermbg=red guibg=#ff0000
